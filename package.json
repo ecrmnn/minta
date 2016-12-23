@@ -6,7 +6,7 @@
   "scripts": {
     "start": "NODE_ENV=developement electron .",
     "start-prod": "electron .",
-    "build": "node_modules/.bin/electron-packager . Minta --out=dist/osx --platform=osx --arch=x64 --overwrite --icon=resources/minta_600.icns"
+    "build": "node_modules/.bin/electron-packager . Minta --out=dist/osx --platform=darwin --arch=x64 --overwrite --icon=resources/minta_600.icns"
   },
   "repository": "https://github.com/ecrmnn/minta",
   "author": {
