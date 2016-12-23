@@ -1,0 +1,147 @@
+/*
+|-----------------------------------------------------------------------------------------------------------------------
+| App
+|-----------------------------------------------------------------------------------------------------------------------
+*/
+
+body {
+    -webkit-app-region: drag;
+    background-color: #22262b;
+    overflow: hidden;
+}
+
+#app {
+    position: relative;
+    box-sizing: border-box;
+    height: 524px;
+    overflow-y: auto;
+}
+
+header {
+    z-index: 5;
+    font-size: 13px;
+    line-height: 14px;
+    padding: 11px 0;
+    color: #909090;
+    background-color: #191e22;
+}
+
+/*
+|-----------------------------------------------------------------------------------------------------------------------
+| Bootstrap Overrides
+|-----------------------------------------------------------------------------------------------------------------------
+*/
+
+textarea:hover,
+input:hover,
+textarea:active,
+input:active,
+textarea:focus,
+input:focus,
+button:focus,
+button:active,
+button:hover,
+label:focus,
+.btn:active,
+.btn.active {
+    outline: 0px !important;
+    -webkit-appearance: none;
+}
+
+input[type="text"], textarea {
+    outline: none;
+    box-shadow:none !important;
+    border:1px solid #ccc !important;
+}
+
+/*
+|-----------------------------------------------------------------------------------------------------------------------
+| Regex Code Block
+|-----------------------------------------------------------------------------------------------------------------------
+*/
+
+.code {
+    font-family: "Lucida Console", Monaco, monospace;
+    cursor: pointer;
+}
+
+/*
+|-----------------------------------------------------------------------------------------------------------------------
+| List Group
+|-----------------------------------------------------------------------------------------------------------------------
+*/
+
+.list-group {
+    margin-bottom: 0;
+}
+
+.list-group-item:last-child {
+    border-radius: 0;
+}
+
+/*
+|-----------------------------------------------------------------------------------------------------------------------
+| Item
+|-----------------------------------------------------------------------------------------------------------------------
+*/
+
+.list-group-item {
+    border-radius: 0px;
+    background-color: transparent;
+    border: none;
+    border-bottom: solid 1px #373b40;
+    color: #9E9E9E;
+}
+
+.list-group-item.selected {
+    background-color: #373b40;
+}
+
+/*
+|-----------------------------------------------------------------------------------------------------------------------
+| Delete Button
+|-----------------------------------------------------------------------------------------------------------------------
+*/
+
+.delete-button {
+    display: none;
+}
+
+.list-group-item:hover .delete-button {
+    display: block;
+}
+
+.btn-transparent {
+    background-color: transparent;
+    border: solid 1px #616161;
+    color: #616161;
+}
+
+.btn-transparent:hover {
+    color: #ef5350;
+}
+
+.btn-transparent:active {
+    background-color: #191e22;
+}
+
+#regex {
+    position: fixed;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    z-index: 5;
+    font-size: 15px;
+    line-height: 17px;
+    padding: 11px 0;
+    color: #808080;
+    background-color: #191e22;
+}
+
+.btn-success {
+    background-color: #4CAF50;
+}
+
+.text-success {
+    color: #4CAF50;
+}

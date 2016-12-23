@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Minta</title>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="src/app.css">
+</head>
+<body>
+<header class="text-center">
+    Minta
+</header>
+<div id="app">
+
+    <div class="list-group">
+        <div class="list-group-item">
+            <div class="input-group">
+                <input type="text" class="form-control"
+                       placeholder="Add your strings here"
+                       v-model="newItem"
+                       @keydown="selectItem"
+                       @keyup.enter="add"
+                       @focus="showSelectedItemIndex"
+                       @blur="hideSelectedItemIndex">
+
+                <div class="input-group-btn">
+                    <button type="button" class="btn btn-success" @click="add">
+                        <span class="glyphicon glyphicon-plus"></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="list-group-item"
+             :class="{'selected': index === selectedItemIndex}"
+             v-if="items.length"
+             v-for="(item, index) in items">
+            <span class="code">{{ item }}</span>
+
+            <div class="delete-button pull-right">
+                <button type="button" class="btn btn-transparent btn-xs" @click="remove(index)">
+                    <span class="glyphicon glyphicon-remove"></span> Remove
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div id="regex" class="text-center copy" v-if="items.length"
+         :data-clipboard-text="regex"
+         @click="triggerCopyFeedback">
+        <div class="code" v-if="!copyFeedback">
+            {{ regex }}
+        </div>
+
+        <div class="text-success" v-if="copyFeedback">
+            <span class="glyphicon glyphicon-ok"></span> Copied to clipboard
+        </div>
+    </div>
+</div>
+</body>
+
+<script>
+  // You can also require other files to run in this process
+  require('./src/app')
+</script>
+</html>

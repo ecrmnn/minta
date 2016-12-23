@@ -1,0 +1,28 @@
+{
+  "name": "minta",
+  "version": "1.0.0",
+  "description": "Generate regular expressions with ease",
+  "main": "main.js",
+  "scripts": {
+    "start": "NODE_ENV=developement electron .",
+    "start-prod": "electron .",
+    "build": "node_modules/.bin/electron-packager . Minta --out=dist/osx --platform=osx --arch=x64 --overwrite --icon=resources/minta_600.icns"
+  },
+  "repository": "https://github.com/ecrmnn/minta",
+  "author": {
+    "name": "Daniel Eckermann",
+    "email": "danieleckermann@gmail.com",
+    "url": "http://danieleckermann.com"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^1.4.1"
+  },
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "clipboard": "^1.5.16",
+    "electron-packager": "^8.4.0",
+    "regexgen": "^1.0.0",
+    "vue": "^2.1.6"
+  }
+}
