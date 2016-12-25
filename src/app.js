@@ -18,6 +18,8 @@ new Vue({
 
   created() {
     new Clipboard('.copy');
+
+    this.$nextTick(() => this.$refs.input.focus());
   },
 
   computed: {
@@ -51,7 +53,7 @@ new Vue({
         this.selectNext();
       } else if (event.keyCode === 38) {
         this.selectPrevious();
-      } else if (event.keyCode === 46) {
+      } else if (event.keyCode === 46 || event.metaKey && event.keyCode === 8) {
         this.deleteSelected();
       }
     },
@@ -73,7 +75,9 @@ new Vue({
     },
 
     deleteSelected() {
-      this.remove(this.selectedItemIndex);
+      if (this.selectedItemIndex !== -1) {
+        this.remove(this.selectedItemIndex);
+      }
     },
 
     showSelectedItemIndex() {

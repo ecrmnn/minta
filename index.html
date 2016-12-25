@@ -21,7 +21,8 @@
                        @keydown="selectItem"
                        @keyup.enter="add"
                        @focus="showSelectedItemIndex"
-                       @blur="hideSelectedItemIndex">
+                       @blur="hideSelectedItemIndex"
+                       ref="input">
 
                 <div class="input-group-btn">
                     <button type="button" class="btn btn-success" @click="add">
