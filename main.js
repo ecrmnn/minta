@@ -17,7 +17,7 @@ function createWindow() {
     width: 440,
     height: 600,
     titleBarStyle: 'hidden-inset',
-    title: 'Regen',
+    title: 'Minta',
     resizable: true,
     maximizable: false
   })
