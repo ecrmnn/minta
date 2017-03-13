@@ -1,4 +1,4 @@
-# minta
+# minta [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
 > Electron app for generating regular expressions
 
 <img src="resources/demo.gif">
