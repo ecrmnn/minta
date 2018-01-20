@@ -5,10 +5,12 @@
   "main": "main.js",
   "scripts": {
     "start": "cross-env NODE_ENV=developement electron .",
-    "start-prod": "electron .",
-    "build": "npm run package && npm run compress",
-    "package": "node_modules/.bin/electron-packager . Minta --out=dist/osx --platform=darwin --arch=x64 --overwrite --icon=resources/minta_600.icns",
-    "compress": "cd dist/osx/Minta-darwin-x64 && tar cvzf Minta.tar.gz Minta.app"
+    "start:prod": "electron .",
+    "build:osx": "npm run package:osx && npm run compress:osx",
+    "package:osx": "node_modules/.bin/electron-packager . Minta --out=dist/osx --platform=darwin --arch=x64 --overwrite --icon=resources/minta_600.icns",
+    "compress:osx": "cd dist/osx/Minta-darwin-x64 && tar cvzf Minta.tar.gz Minta.app",
+    "build:win": "cross-env NODE_ENV=developement npm run package:win",
+    "package:win": "node_modules/.bin/electron-packager . Minta --out=dist/win --platform=win32 --arch=x64 --overwrite --icon=resources/minta_600.ico"
   },
   "repository": "https://github.com/ecrmnn/minta",
   "author": {
