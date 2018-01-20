@@ -1,6 +1,14 @@
 'use strict';
 
-const Vue = require('vue/dist/vue');
+let Vue;
+
+// Use minified version of Vue for production
+if (process.env.NODE_ENV) {
+  Vue = require('vue/dist/vue');
+} else {
+  Vue = require('vue/dist/vue.min.js');
+}
+
 const regexgen = require('regexgen');
 const Clipboard = require('clipboard');
 
