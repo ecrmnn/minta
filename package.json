@@ -9,8 +9,7 @@
     "build:osx": "npm run package:osx && npm run compress:osx",
     "package:osx": "node_modules/.bin/electron-packager . Minta --out=dist/osx --platform=darwin --arch=x64 --overwrite --icon=resources/minta_600.icns",
     "compress:osx": "cd dist/osx/Minta-darwin-x64 && tar cvzf Minta.tar.gz Minta.app",
-    "build:win": "cross-env NODE_ENV=developement npm run package:win",
-    "package:win": "node_modules/.bin/electron-packager . Minta --out=dist/win --platform=win32 --arch=x64 --overwrite --icon=resources/minta_600.ico"
+    "build:win": "node_modules/.bin/electron-packager . Minta --out=dist/win --platform=win32 --arch=x64 --overwrite --icon=resources/minta_600.ico"
   },
   "repository": "https://github.com/ecrmnn/minta",
   "author": {
@@ -20,14 +19,14 @@
   },
   "license": "MIT",
   "devDependencies": {
-    "cross-env": "^5.1.3",
-    "electron": "^1.7.10"
-  },
-  "dependencies": {
     "bootstrap": "^3.3.7",
     "clipboard": "^1.7.1",
-    "electron-packager": "^10.1.1",
+    "electron": "^1.7.10",
     "regexgen": "^1.3.0",
     "vue": "^2.5.13"
+  },
+  "dependencies": {
+    "cross-env": "^5.1.3",
+    "electron-packager": "^10.1.1"
   }
 }
