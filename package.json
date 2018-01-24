@@ -1,6 +1,6 @@
 {
   "name": "minta",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Generate regular expressions with ease",
   "main": "main.js",
   "scripts": {
