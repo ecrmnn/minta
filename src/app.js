@@ -24,7 +24,15 @@ new Vue({
 
   computed: {
     regex() {
-      return regexgen(this.items).toString();
+      if (/\\u(\w{4})/g.test(regexgen(this.items).toString())) { // Works only for UTF-16 hex
+        return regexgen(this.items).toString()
+        .replace(/\\\u(\w{4})/g,(undefined,utf8) => String.fromCharCode(parseInt(utf8,16)));
+
+      }
+      else
+      {
+        return regexgen(this.items).toString();
+      }
     }
   },
 
